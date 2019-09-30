@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("paviShub/mynodeapp2")
+        app = docker.build("pavishub/mynodeapp2")
     }
 
     stage('Test image') {
@@ -31,7 +31,7 @@ node {
                 echo "Trying to Push Docker Build to DockerHub"
 	    
 	    //withDockerRegistry(credentialsId: 'dokcerid', url: 'https://hub.docker.com/') {
-	    sh label: 'Docker Login', script: 'docker login --username "paviShub" --password "Pavi2019"'
+	    sh label: 'Docker Login', script: 'docker login --username "pavishub" --password "pavishub2019"'
     	    app.push("${env.BUILD_NUMBER}")
             app.push("latest")
 	//}
