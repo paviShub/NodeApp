@@ -31,7 +31,7 @@ node {
                 echo "Trying to Push Docker Build to DockerHub"
 	    
 	    //withDockerRegistry(credentialsId: 'dokcerid', url: 'https://hub.docker.com/') {
-	    sh label: 'Docker Login', script: 'docker login --username "amitsingh695" --password "manish5137"'
+	    sh label: 'Docker Login', script: 'docker login --username "paviShub" --password "Pavi2019"'
     	    app.push("${env.BUILD_NUMBER}")
             app.push("latest")
 	//}
